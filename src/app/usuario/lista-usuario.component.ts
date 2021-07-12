@@ -44,11 +44,8 @@ export class ListaUsuarioComponent implements OnInit {
   
 
   delete(id: any ){
-    console.log("alejo");
-
       const a=this.usuarioService.delete(id).subscribe(
          data=>{
-           console.log("alejo borra");
            this.toastr.success('no se pudo eliminar','Falló',{
              timeOut: 3000,positionClass:'toast-top-center'});
          },
